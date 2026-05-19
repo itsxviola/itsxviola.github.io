@@ -1,0 +1,287 @@
+<html>
+  <head>
+    <style>
+      html, body { 
+        background-color:#000;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden !important;  
+      }
+    </style>
+    
+    <script src="https://mrdoob.github.io/stats.js/build/stats.min.js"></script>
+    
+    <script src="https://get.goxtk.com/xtk_xdat.gui.js"></script>
+  
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@latest/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@latest/examples/jsm/"
+
+      }
+    }
+    </script>
+
+    <script type="module">
+
+      import * as THREE from 'three';
+      import { OrbitControls } from 'three/addons/controls/OrbitControls.js';      
+
+      import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+      
+      import { VertexNormalsHelper } from 'three/addons/helpers/VertexNormalsHelper.js';
+
+      import {AnaglyphEffect } from 'three/addons/effects/AnaglyphEffect.js';
+
+      var renderer, controls, scene, camera;
+      var stats;
+      var effect;
+    //  var q = new THREE.quaternion(x,y,z,w);
+     // var wireframeON = false; 
+     // var AllMesh = []; 
+
+
+      // scene helper/control object
+      window['SCENE'] = {
+        'anaglyph':false,    
+        'poly': null,
+        'wireframe':false,
+        
+        'rotate_poly': false,
+        'do_rotate_poly':function() {
+          window['SCENE']['rotate_poly'] = !window['SCENE'] ['rotate_poly'];
+        },
+        'blender': null,
+        'rotate_blender': false,
+        'do_rotate_blender':function() {
+          window['SCENE']['rotate_blender'] = !window['SCENE'] ['rotate_blender'];
+        },
+        'blender_helper':null,
+        'blender_old_material': null,
+        'change_material': function() {
+        if (!window['SCENE']['blender_old_material']) {
+        window['SCENE']['blender_old_material'] = window['SCENE']['blender'].material.clone();
+        window['SCENE']['blender'].material = new THREE.MeshNormalMaterial();
+        } else {
+        window['SCENE']['blender'].material = window['SCENE']['blender_old_material'].clone();
+        window['SCENE']['blender_old_material'] = null;
+        }
+    }
+
+        
+      };
+      
+     
+      
+
+      window.onload = function() {
+
+        // Three.js code goes here
+        scene = new THREE.Scene();
+
+        // setup the camera
+        var fov = 75;
+        var ratio = window.innerWidth / window.innerHeight;
+        var zNear = 0.1;
+        var zFar = 10000;
+        camera = new THREE.PerspectiveCamera( fov, ratio, zNear, zFar );
+       // camera.position.set(0, 0, 100);
+       camera.position.set(20, 20, 10);
+
+        // create renderer and setup the canvas
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+
+        // stats.js widget
+        stats = new Stats();
+        document.body.appendChild( stats.domElement );
+
+
+        var ambientLight = new THREE.AmbientLight();
+        scene.add( ambientLight );
+
+        var light = new THREE.DirectionalLight( 0xffffff, 5.0 );
+        light.position.set( 10, 100, 10 );
+        scene.add( light );
+
+       
+         // load GLTF file 
+         var loader = new GLTFLoader();
+         loader.load( 'poly.glb', function ( gltf ) {
+          var poly = gltf.scenes[0].children[0];
+          poly.scale.x = 10;
+          poly.scale.y = 10;
+          poly.scale.z = 10;    
+
+          poly.quaternion.w = 1;
+          poly.quaternion.x = 0;
+          poly.quaternion.y = -0.15;
+          poly.quaternion.z = 0;
+
+
+        // poly.translateX(-5);
+         poly.translateX(1);
+         poly.translateY(3);
+         poly.translateZ(6);
+
+          window.SCENE.poly = poly;
+          var polyui = gui.addFolder('Polycam Mesh');
+        
+        
+        polyui.add(window.SCENE.poly.material, 'wireframe');
+        polyui.add(window.SCENE, 'do_rotate_poly').name('rotate!');
+
+
+          polyui.open();
+          scene.add( gltf.scene );
+          
+          });
+
+         var loadKermitGLB = new GLTFLoader();
+         loadKermitGLB.load( 'KERMIT.glb', function ( gltf ) {
+          var blender = gltf.scenes[0].children[0];
+        
+          blender.scale.x = 10;
+          blender.scale.y = 10;
+          blender.scale.z = 10;   
+
+          blender.quaternion.w = 1;
+          blender.quaternion.x = 0;
+          blender.quaternion.y = -0.24;
+          blender.quaternion.z = 0;
+
+          blender.translateX(1);
+          blender.translateY(3);
+          blender.translateZ(-3);
+         
+
+           window.SCENE.blender = blender;
+          
+           var blenderui= gui.addFolder('Blender Mesh');
+           var helper = new VertexNormalsHelper( blender, 0.1, 'blue' );
+           helper.visible = false;
+           scene.add(helper);
+        //...other stuff.. setting up blenderui etc.
+          window.SCENE.blender_helper = helper;
+          blenderui.add(helper, 'visible').name('Show normals!');
+
+          blenderui.add(window.SCENE, 'change_material').name('Change Material');
+          blenderui.add(window.SCENE, 'do_rotate_blender').name('rotate!');
+          blenderui.open();
+          scene.add( gltf.scene );
+          });
+
+
+
+        // interaction
+        controls = new OrbitControls( camera, renderer.domElement );
+        
+        var gui = new dat.GUI();
+        var sceneui = gui.addFolder('Scene');
+      
+        sceneui.add(window.SCENE,'anaglyph');
+        sceneui.add(light.position, 'x', -100,100).name('Light X');
+        sceneui.add(light.position, 'y', -100,100).name('Light Y');
+        sceneui.add(light.position, 'z', -100,100).name('Light Z');
+        sceneui.add(light, 'intensity',1,10).name('Light Intensity');
+        sceneui.addColor(ambientLight, 'color').name('Ambient Light');
+        sceneui.open();
+       
+        
+
+
+       
+        
+        // call animation/rendering loop
+        animate();
+
+        
+        
+      };
+
+      function animate() {
+
+        requestAnimationFrame( animate );
+        stats.update();
+        // and here..
+        controls.update();
+       
+
+        if (window.SCENE.anaglyph) {
+         effect = new AnaglyphEffect(renderer);
+         effect.setSize(window.innerWidth, window.innerHeight);  
+         effect.render( scene, camera ); 
+        }
+        else {
+           renderer.render( scene, camera ); 
+        }
+        
+        if (window.SCENE.poly) {
+
+          if (window.SCENE.rotate_poly) {
+            // set up 180 degree quaternion
+              
+              // lec 17 slide 8
+              var q = new THREE.Quaternion( 
+                              Math.sin( Math.PI / 2 ) * 0 , 
+                              Math.sin( Math.PI / 2 ) * 1 , 
+                              Math.sin( Math.PI / 2 ) * 0 , 
+                              Math.cos( Math.PI / 2 ) );
+
+
+            window.SCENE.poly.quaternion.slerp(q,0.01);
+           // window.SCENE.poly_helper.update();
+          }
+          else {
+
+            //reset quaternion to identity
+            var q = new THREE.Quaternion(0, 0, 0, 1 );
+
+            window.SCENE.poly.quaternion.slerp(q,0.01);
+           // window.SCENE.poly_helper.update();
+          }
+        }
+
+
+        if (window.SCENE.blender) {
+
+        if (window.SCENE.rotate_blender) {
+         // set up 180 degree quaternion
+    
+         // lec 17 slide 8
+         var q = new THREE.Quaternion( 
+                    Math.sin( Math.PI / 2 ) * 0 , 
+                    Math.sin( Math.PI / 2 ) * 1 , 
+                    Math.sin( Math.PI / 2 ) * 0 , 
+                    Math.cos( Math.PI / 2 ) );
+          
+
+        window.SCENE.blender.quaternion.slerp(q,0.01);
+        window.SCENE.blender_helper.update();
+        }
+        else {
+
+       //reset quaternion to identity
+       var q = new THREE.Quaternion(0, 0, 0, 1 );
+
+      window.SCENE.blender.quaternion.slerp(q,0.01);
+      window.SCENE.blender_helper.update();
+      }
+    }
+
+
+        
+   };
+      
+    </script>
+  </head>
+  <body></body>
+</html>
+
+
+
