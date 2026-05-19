@@ -7,7 +7,13 @@ https://itsxviola.github.io/cs460student/02/
 
 # Torus knots 
 
+https://itsxviola.github.io/cs460student/03/
 
+# Paddlewar clone game
+
+https://itsxviola.github.io/cs460student/04/
 
 # 3D mesh model
+
+https://itsxviola.github.io/cs460student/05/
 
