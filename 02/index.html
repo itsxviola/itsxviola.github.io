@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <title>CS460.org Assignment 2</title>
+    <style>
+      body {
+        background-color:#000;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden !important; 
+      }
+    </style>
+    <script type="text/javascript" src="https://get.goXTK.com/xtk_edge.js"></script>
+    
+    <script type ="text/javascript" src="loader.js"></script>
+
+    <script type ="text/javascript">
+     window.onload = function() {
+
+    CUBE_SIDELENGTH = 10;
+    GAP = 2;
+
+     console.log('loaded');
+     
+     r = new X.renderer3D();
+     r.init();
+     
+     c = new X.cube;
+     c.lengthX = (c.lengthX/2) + 0.05 ;
+     c.lengthY = (c.lengthY/2) + 0.05;
+     c.lengthZ=  (c.lengthZ/2) + 0.05;
+     
+     
+
+  
+     r.add(c);
+
+  
+     r.render();
+     
+     };
+
+     window.onkeypress = function(e) {
+      if (e.code == 'KeyD') {
+     // c.transform.translateX(-10);
+     c.transform.translateX(-CUBE_SIDELENGTH - GAP);
+    }
+     if (e.code == 'KeyA') {
+   // c.transform.translateX(10);
+    c.transform.translateX(CUBE_SIDELENGTH + GAP);
+    }
+    if (e.code == 'KeyW') {
+    // c.transform.translateZ(10);
+     c.transform.translateZ(CUBE_SIDELENGTH + GAP);
+    }
+    if (e.code == 'KeyS') {
+     // c.transform.translateZ(-10);
+     c.transform.translateZ(-CUBE_SIDELENGTH - GAP);
+    }
+    if (e.code == 'KeyQ') {
+     // c.transform.translateY(10);
+      c.transform.translateY(CUBE_SIDELENGTH + GAP);
+    }
+    if (e.code == 'KeyE') {
+     // c.transform.translateY(-10);
+     c.transform.translateY(-CUBE_SIDELENGTH - GAP);
+    }
+
+    if (e.code == 'Digit1') {
+     //c1 = new X.cube;
+     c.color = [1,1,1]
+   //  r.add(c1); //white
+   
+    }
+    if (e.code == 'Digit2') {
+     //c2 = new X.cube;
+     c.color = [1,0,0]
+    // r.add(c2); //red
+   
+    }
+    if (e.code == 'Digit3') {
+    // c3 = new X.cube;
+     c.color = [0,1,0]
+    // r.add(c3); //green
+    }
+    if (e.code == 'Digit4') {
+   //  c4 = new X.cube;
+     c.color = [0,0,1]
+    // r.add(c4); //blue
+    }
+    
+    if (e.code == 'Digit5') {
+    // c5 = new X.cube;
+     c.color = [1,1,0]
+    // r.add(c5); //yellow
+    }
+    if (e.code == 'Digit6') {
+    // c6 = new X.cube;
+     c.color = [1,0.24,0.5]
+   //  r.add(c6); //pink
+    }
+    if (e.code == 'Digit7') {
+    // c7 = new X.cube;
+     c.color = [0,1,1]
+     //r.add(c); //cyan
+    }
+    if (e.code == 'Digit0') {
+   //  c8 = new X.cube;
+     c.color = [0,0,0]
+    // r.add(c8); //black
+    }
+    if (e.code == 'Digit8') {
+   //  c8 = new X.cube;
+     c.color = [0,0.5,0.75]
+    // r.add(c8); // light blue
+    }
+    if (e.code == 'Digit9') {
+   //  c8 = new X.cube;
+     c.color = [0.5,0.75,1]
+    // r.add(c8); //
+    }
+
+    if (e.code == 'Space') {
+     // console.log('printed??');
+      new_cube = new X.cube();
+      new_cube.color = c.color;
+      new_cube.transform.matrix = new Float32Array(c.transform.matrix);
+      new_cube.lengthX = new_cube.lengthY = new_cube.lengthZ = CUBE_SIDELENGTH;
+      r.add(new_cube);
+    }
+    
+    if (e.code == 'KeyO') {
+     download();
+    }
+    if (e.code == 'KeyL') {
+     upload("scene.json");
+    
+    }
+
+  }
+
+
+
+     </script>
+  </head>
+  <body>
+  </body>
+</html>
