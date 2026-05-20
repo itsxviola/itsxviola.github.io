@@ -45,8 +45,13 @@ https://itsxviola.github.io/cs460student/05/
 
 https://www.roblox.com/games/15426355879/obby
 
+<img width="750" height="514" alt="figma roblox thumbnail" src="https://github.com/user-attachments/assets/039ff524-b10d-4f9d-b9f4-37d33c80f976" />
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Horror escape game
+
+<img width="896" height="392" alt="mannequinn map unity" src="https://github.com/user-attachments/assets/6bc8bbf4-6a8b-4162-a151-7844f28f4689" />
+
 
