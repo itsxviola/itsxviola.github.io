@@ -6,9 +6,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Torus knots 
-
-https://itsxviola.github.io/cs460student/03/
+# [Torus knots](https://itsxviola.github.io/cs460student/03/)
 
 <img width="673" height="85" alt="Screen Shot 2026-05-19 at 3 49 48 PM" src="https://github.com/user-attachments/assets/7347a4ab-99fe-4c56-8801-7dd5fc6b8c04" />
 
@@ -17,9 +15,7 @@ https://itsxviola.github.io/cs460student/03/
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# Paddlewar clone game
-
-https://itsxviola.github.io/cs460student/04/
+# [Paddlewar clone game](https://itsxviola.github.io/cs460student/04/)
 
 <img width="671" height="65" alt="Screen Shot 2026-05-19 at 3 57 21 PM" src="https://github.com/user-attachments/assets/b502ffdb-70fc-4ed7-a337-91e737b4b225" />
 
@@ -28,9 +24,7 @@ https://itsxviola.github.io/cs460student/04/
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# 3D mesh model
-
-https://itsxviola.github.io/cs460student/05/
+# [3D mesh model](https://itsxviola.github.io/cs460student/05/)
 
 <img width="391" height="70" alt="Screen Shot 2026-05-19 at 7 11 11 PM" src="https://github.com/user-attachments/assets/8f5a1230-9f65-4d73-9b89-714e3963ea54" />
 
@@ -39,16 +33,14 @@ https://itsxviola.github.io/cs460student/05/
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# Roblox obby 
-
-https://www.roblox.com/games/15426355879/obby
+# [Roblox obby](https://www.roblox.com/games/15426355879/obby)
 
 <img width="750" height="514" alt="figma roblox thumbnail" src="https://github.com/user-attachments/assets/039ff524-b10d-4f9d-b9f4-37d33c80f976" />
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Horror escape game
+# [Horror escape game](https://github.com/battleskorpion/mann-and-kinn-461/tree/main)
 
 <img width="896" height="392" alt="mannequinn map unity" src="https://github.com/user-attachments/assets/6bc8bbf4-6a8b-4162-a151-7844f28f4689" />
 
