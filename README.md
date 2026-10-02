@@ -48,7 +48,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# [Music Library & Artist Discovery Systems](https://replit.com/@LindaDo/Virtual-mini-Piano)
+# [Music Library & Artist Discovery Systems](https://github.com/itsxviola/itsxviola.github.io/blob/main/Music_database.sql)
 
 <img width="846" height="309" alt="Screen Shot 2026-10-01 at 11 58 31 PM" src="https://github.com/user-attachments/assets/593891d0-93c6-49fb-932e-8c15a7d8e8b2" />
 <img width="1002" height="317" alt="Screen Shot 2026-10-02 at 12 00 53 AM" src="https://github.com/user-attachments/assets/5cb35699-6309-4e43-a4a5-3552a914c7dd" />
