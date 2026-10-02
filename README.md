@@ -50,6 +50,22 @@
 
 # [Music Library & Artist Discovery Systems](https://replit.com/@LindaDo/Virtual-mini-Piano)
 
+<img width="846" height="309" alt="Screen Shot 2026-10-01 at 11 58 31 PM" src="https://github.com/user-attachments/assets/593891d0-93c6-49fb-932e-8c15a7d8e8b2" />
+<img width="1002" height="317" alt="Screen Shot 2026-10-02 at 12 00 53 AM" src="https://github.com/user-attachments/assets/5cb35699-6309-4e43-a4a5-3552a914c7dd" />
+<img width="1081" height="238" alt="Screen Shot 2026-10-02 at 12 01 24 AM" src="https://github.com/user-attachments/assets/f4b8fc9f-86f5-429b-806f-4ba57eb8e5a4" />
+<img width="880" height="316" alt="Screen Shot 2026-10-02 at 12 01 47 AM" src="https://github.com/user-attachments/assets/58848d11-5b7b-43fc-ba7b-739d24fc5085" />
+<img width="980" height="220" alt="Screen Shot 2026-10-02 at 12 02 19 AM" src="https://github.com/user-attachments/assets/5fec6a0c-8cd2-454c-91e2-98211857f38b" />
+<img width="930" height="307" alt="Screen Shot 2026-10-02 at 12 02 45 AM" src="https://github.com/user-attachments/assets/2a9afc59-cbf8-4c5a-9cd4-a76804f4c46e" />
+<img width="986" height="298" alt="Screen Shot 2026-10-02 at 12 03 13 AM" src="https://github.com/user-attachments/assets/86898a7f-6068-482c-8aa5-4ed6ac796121" />
+<img width="1064" height="312" alt="Screen Shot 2026-10-02 at 12 03 39 AM" src="https://github.com/user-attachments/assets/ef0d4a27-cf83-438d-9c89-a746497ac462" />
+
+
+
+
+
+
+
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
