@@ -50,6 +50,8 @@
 
 # [Music Library & Artist Discovery Systems](https://github.com/itsxviola/itsxviola.github.io/blob/main/Music_database.sql)
 
+<img width="1014" height="573" alt="Screen Shot 2026-10-03 at 2 34 50 PM" src="https://github.com/user-attachments/assets/4fb1a661-ed94-4788-ac1b-99d5caf38689" />
+
 <img width="846" height="309" alt="Screen Shot 2026-10-01 at 11 58 31 PM" src="https://github.com/user-attachments/assets/593891d0-93c6-49fb-932e-8c15a7d8e8b2" />
 <img width="1002" height="317" alt="Screen Shot 2026-10-02 at 12 00 53 AM" src="https://github.com/user-attachments/assets/5cb35699-6309-4e43-a4a5-3552a914c7dd" />
 <img width="1081" height="238" alt="Screen Shot 2026-10-02 at 12 01 24 AM" src="https://github.com/user-attachments/assets/f4b8fc9f-86f5-429b-806f-4ba57eb8e5a4" />
@@ -58,6 +60,16 @@
 <img width="930" height="307" alt="Screen Shot 2026-10-02 at 12 02 45 AM" src="https://github.com/user-attachments/assets/2a9afc59-cbf8-4c5a-9cd4-a76804f4c46e" />
 <img width="986" height="298" alt="Screen Shot 2026-10-02 at 12 03 13 AM" src="https://github.com/user-attachments/assets/86898a7f-6068-482c-8aa5-4ed6ac796121" />
 <img width="1064" height="312" alt="Screen Shot 2026-10-02 at 12 03 39 AM" src="https://github.com/user-attachments/assets/ef0d4a27-cf83-438d-9c89-a746497ac462" />
+
+
+
+
+<img width="998" height="724" alt="Screen Shot 2026-10-03 at 2 38 32 PM" src="https://github.com/user-attachments/assets/32434779-892e-4784-abb1-cb6e3ce4dd10" />
+<img width="916" height="663" alt="Screen Shot 2026-10-03 at 2 39 03 PM" src="https://github.com/user-attachments/assets/991c027f-fd1b-429e-b101-b757d0f0f470" />
+<img width="874" height="636" alt="Screen Shot 2026-10-03 at 2 40 11 PM" src="https://github.com/user-attachments/assets/780bf960-32f5-476d-afd8-7bd5d0fa529a" />
+<img width="595" height="441" alt="Screen Shot 2026-10-03 at 2 40 41 PM" src="https://github.com/user-attachments/assets/e6445c14-5d8c-4f84-80d5-ebccd6ce3513" />
+<img width="810" height="592" alt="Screen Shot 2026-10-03 at 2 41 02 PM" src="https://github.com/user-attachments/assets/f19109be-e048-4f28-9fda-2be95d6b48d2" />
+
 
 
 
